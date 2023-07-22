@@ -19,7 +19,7 @@
     <button id='send' type="button" onclick="clickButtonSend()">調べてみる！</button>
 
     <p>PCでの遅延        : <span id="delay_pc"></span></p>
-    <p>スピーカーでの遅延: <span id="delay_speaker"></span></p>
+    <p>イヤホンでの遅延: <span id="delay_earphone"></span></p>
 
     <script>
         function clickButtonSend(){
@@ -30,27 +30,27 @@
             switch(rhythm_game_name){
                 case 'Arcaea':
                     document.getElementById("delay_pc").textContent = "210程度";
-                    document.getElementById("delay_speaker").textContent = "90程度";
+                    document.getElementById("delay_earphone").textContent = "90程度";
                     break;
 
                 case 'Takumi Cubic':
                     document.getElementById("delay_pc").textContent = "-3.00程度";
-                    document.getElementById("delay_speaker").textContent = "-0.75程度";
+                    document.getElementById("delay_earphone").textContent = "-0.75程度";
                     break;
 
                 case 'プロセカ':
                     document.getElementById("delay_pc").textContent = "-5.3程度";
-                    document.getElementById("delay_speaker").textContent = "-2.1程度";
+                    document.getElementById("delay_earphone").textContent = "-2.1程度";
                     break;
 
                 case 'MuseDash':
                     document.getElementById("delay_pc").textContent = "0.213程度";
-                    document.getElementById("delay_speaker").textContent = "0.085程度";
+                    document.getElementById("delay_earphone").textContent = "0.085程度";
                     break;
 
                 case 'Phigros':
                     document.getElementById("delay_pc").textContent = "205程度";
-                    document.getElementById("delay_speaker").textContent = "70程度";
+                    document.getElementById("delay_earphone").textContent = "70程度";
                     break;
 
                 default:
