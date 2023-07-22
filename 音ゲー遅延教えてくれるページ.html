@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1">
+        <select name="rhythm_game_select">
+            <option value='Arcaea'>Arcaea</option>
+            <option value='Takumi Cubic'>Takumi Cubic</option>
+            <option value='プロセカ'>プロセカ</option>
+            <option value='MuseDash'>MuseDash</option>
+            <option value='Phigros'>Phigros</option>
+        </select>
+    </form>
+    <button id='send' type="button" onclick="clickButtonSend()">調べてみる！</button>
+
+    <p>PCでの遅延        : <span id="delay_pc"></span></p>
+    <p>スピーカーでの遅延: <span id="delay_speaker"></span></p>
+
+    <script>
+        function clickButtonSend(){
+            const rhythm_game_select = document.form1.rhythm_game_select;
+            const rhythm_game_index = rhythm_game_select.selectedIndex;
+            const rhythm_game_name = rhythm_game_select.options[rhythm_game_index].value;
+            
+            switch(rhythm_game_name){
+                case 'Arcaea':
+                    document.getElementById("delay_pc").textContent = "210程度";
+                    document.getElementById("delay_speaker").textContent = "90程度";
+                    break;
+
+                case 'Takumi Cubic':
+                    document.getElementById("delay_pc").textContent = "-3.00程度";
+                    document.getElementById("delay_speaker").textContent = "-0.75程度";
+                    break;
+
+                case 'プロセカ':
+                    document.getElementById("delay_pc").textContent = "-5.3程度";
+                    document.getElementById("delay_speaker").textContent = "-2.1程度";
+                    break;
+
+                case 'MuseDash':
+                    document.getElementById("delay_pc").textContent = "0.213程度";
+                    document.getElementById("delay_speaker").textContent = "0.085程度";
+                    break;
+
+                case 'Phigros':
+                    document.getElementById("delay_pc").textContent = "205程度";
+                    document.getElementById("delay_speaker").textContent = "70程度";
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
